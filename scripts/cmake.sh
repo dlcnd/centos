@@ -1,0 +1,22 @@
+#!/bin/sh
+VER="cmake-3.13.3"
+cd /tmp
+rm /tmp/cmake*
+wget https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3.tar.gz
+
+if [ ! -d "/home/$USER/app"]; then
+	mkdir /home/$USER/app
+#fi
+tar -zxvf $VER.tar.gz -C /home/$USER/app
+cd /home/$USER/app
+mv /home/$USER/app/$VER /home/$USER/ap/$VER_src
+mkdir $VER
+cd $VER_src
+
+#여기서 부터는 수동으로 진행
+scl enable devtoolset-6 bash
+./configure --prefix="/home/$USER/app/$VER"
+make
+make install
+
+
