@@ -1,4 +1,5 @@
 #!/bin/sh
+yum -y install epel-release
 yum -y install git
 yum -y install espeak
 yum -y install fish
@@ -6,16 +7,20 @@ yum -y install mesa-libGLU # for Nuke
 yum -y install transmission
 yum -y install tigervnc
 yum -y install filezilla
+yum -y install pandoc
+yum -y install key-mon
 yum -y install tree
+yun -y install ImageMagick
+yum -y install mediainfo
+yum -y install gvim
+
 # devtools
 yum -y install centos-release-scl
 yum -y install devtoolset-6
+
 # ripgrep
 yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo
 yum -y install ripgrep
-
-#ImageMagick
-yum -y install ImageMagick
 
 # chrome
 cd /tmp
