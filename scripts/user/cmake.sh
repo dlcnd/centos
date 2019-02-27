@@ -15,5 +15,3 @@ cd /home/$USER/app/cmake-3.13.3_src
 ./configure --prefix="/home/$USER/app/cmake-3.13.3"
 make
 make install
-
-
