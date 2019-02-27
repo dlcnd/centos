@@ -1,11 +1,11 @@
 #!/bin/sh
 if [[ $EUID -ne 0 ]]; then
-	ehco "this script must be run as Root"1>&2
+	echo "This script must be run as Root" 1>&2
 	exit 1
 fi
 
 yum -y update
-yum -y groupinstall "Develoments Tools" "Additional Development"
+yum -y groupinstall "Development Tools" "Additional Development"
 yum -y install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel opus-devel
 yum -y install libass-devel yasm
 yum -y repo-pkgs zmrepo remove
@@ -23,4 +23,3 @@ git checkout refs/tags/
 ./configure --launch-jobs=8 --launch
 make --directory=build install
 rm -rf build
-
