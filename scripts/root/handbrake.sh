@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 yum -y update
-yum -y groupinstall "Developments Tools" "Additional Development"
+yum -y groupinstall "Development Tools" "Additional Development"
 yum -y install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel opus-devel
 yum -y install libass-devel yasm
 yum -y repo-pkgs zmrepo remove
