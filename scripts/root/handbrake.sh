@@ -1,6 +1,6 @@
 #!/bin/sh
 if [[ $EUID -ne 0 ]]; then
-	ehco "this script must be run as Root"1>&2
+	echo "this script must be run as Root" 1>&2
 	exit 1
 fi
 
@@ -23,4 +23,3 @@ git checkout refs/tags/
 ./configure --launch-jobs=8 --launch
 make --directory=build install
 rm -rf build
-
