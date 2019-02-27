@@ -1,4 +1,4 @@
 #!/bin/sh
-FIDN=$(zenity --entry --title="Rename" --text="바꿀 문자열 입력")
+FIND=$(zenity --entry --title="Rename" --text="바꿀 문자열 입력")
 DST=$(zenity --entry --title="Rename" --text="바뀔 문자열 입력")
 rename $FIND $DST *
