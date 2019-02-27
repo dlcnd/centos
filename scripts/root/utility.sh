@@ -1,9 +1,13 @@
 #!/bin/sh
+if [[ $EUID -ne 0 ]]; then
+	echo "This script must be run as Root" 1>&2
+	exit 1
+fi
 yum -y install epel-release
 yum -y install git
 yum -y install espeak
 yum -y install fish
-yum -y install mesa-libGLU # for Nuke
+yum -y install mesa-libGLU # for Nuke and Other Graphics SW.
 yum -y install transmission
 yum -y install tigervnc
 yum -y install filezilla
@@ -13,6 +17,8 @@ yum -y install tree
 yun -y install ImageMagick
 yum -y install mediainfo
 yum -y install gvim
+yum -y install libreoffice
+yum -y install calligra-krita
 
 # ripgrep
 yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo
