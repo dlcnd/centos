@@ -2,7 +2,6 @@
 if [ ! -d "/home/$USER/app"]; then
 	mkdir /home/$USER/app
 fi
-
 cd /home/$USER/app
 wget https://github.com/openexr/openexr/archive/v2.3.0.tar.gz
 tar -zxvf v2.3.0.tar.gz
@@ -18,3 +17,5 @@ cd ../OpenEXR
 ./configure --prefix="/home/$HOME/app/openexr --with-ilmbase-prefix=$HOME/app/IlmBase"
 make
 make install
+cd /home/$USER/app
+rm v2.3.0.tar.gz
