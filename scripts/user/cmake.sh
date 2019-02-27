@@ -11,7 +11,7 @@ mv /home/$USER/app/cmake-3.13.3 /home/$USER/app/cmake-3.13.3_src
 mkdir cmake-3.13.3
 cd /home/$USER/app/cmake-3.13.3_src
 
-#scl enable devtoolset-6 bash 
+#scl enable devtoolset-6 bash 수동진행
 ./configure --prefix="/home/$USER/app/cmake-3.13.3"
 make
 make install
